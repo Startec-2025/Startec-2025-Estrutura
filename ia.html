@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEC - Plataforma Educacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+<div id="ia" class="tab-content">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="p-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">Análise de Desempenho</h2>
+                    <p class="opacity-90">Identificamos seus pontos fortes e fracos para melhorar seus estudos</p>
+                </div>
+                <div class="bg-blue-900 px-4 py-2 rounded-full flex items-center">
+                    <i class="fas fa-robot mr-2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="p-6">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">Seu Desempenho por Matéria</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Matemática -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3 icon-center">
+                                <i class="fas fa-square-root-alt text-blue-600"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Matemática</h4>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Seu desempenho</span>
+                                <span class="font-medium">0%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="text-sm">
+                            <p class="text-gray-600 mb-1"><span class="font-medium text-red-600">Maior dificuldade:</span> Não Praticada (0%)</p>
+                            <p class="text-gray-600"><span class="font-medium text-green-600">Ponto forte:</span> Não Praticada (0%)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Português -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-green-100 p-2 rounded-full mr-3 icon-center">
+                                <i class="fas fa-book text-green-600"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Português</h4>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Seu desempenho</span>
+                                <span class="font-medium">0%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="text-sm">
+                            <p class="text-gray-600 mb-1"><span class="font-medium text-red-600">Maior dificuldade:</span> Não Praticada (0%)</p>
+                            <p class="text-gray-600"><span class="font-medium text-green-600">Ponto forte:</span> Não Praticada (0%)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Comparativo -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3 icon-center">
+                                <i class="fas fa-chart-bar text-purple-600"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Comparativo</h4>
+                        </div>
+                        <div class="text-sm space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Média geral dos alunos:</span>
+                                <span class="font-medium">65%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sua posição:</span>
+                                <span class="font-medium text-blue-600">Top 40%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Melhor matéria:</span>
+                                <span class="font-medium text-green-600">Português (Top 30%)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Para melhorar:</span>
+                                <span class="font-medium text-red-600">Matemática (Top 55%)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evolução -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-yellow-100 p-2 rounded-full mr-3 icon-center">
+                                <i class="fas fa-chart-line text-yellow-600"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Sua Evolução</h4>
+                        </div>
+                        <div class="text-sm space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Último mês:</span>
+                                <span class="font-medium text-green-600">+12% em Português</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Último mês:</span>
+                                <span class="font-medium text-green-600">+8% em Matemática</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Tendência:</span>
+                                <span class="font-medium text-blue-600">Melhorando consistentemente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Plano de Estudos Personalizado</h3>
+            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                <p class="text-gray-700 mb-4">Com base na sua análise, recomendamos focar nos seguintes tópicos nesta semana:</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-red-100 p-2 rounded-full mr-3 mt-1 icon-center">
+                            <i class="fas fa-exclamation text-red-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Geometria (Matemática)</h4>
+                            <p class="text-sm text-gray-600">Assista às 2 videoaulas recomendadas e resolva 10 exercícios específicos</p>
+                            <div class="mt-2 flex space-x-2">
+                                <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Prioridade Alta</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2h de estudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-yellow-100 p-2 rounded-full mr-3 mt-1 icon-center">
+                            <i class="fas fa-clock text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Concordância (Português)</h4>
+                            <p class="text-sm text-gray-600">Revise as regras de concordância e faça 5 exercícios</p>
+                            <div class="mt-2 flex space-x-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">1h de estudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3 mt-1 icon-center">
+                            <i class="fas fa-lightbulb text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Revisão Geral</h4>
+                            <p class="text-sm text-gray-600">Faça um simulado completo para testar seus conhecimentos</p>
+                            <div class="mt-2 flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2h de estudo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <div class="flex">
+                    <div class="mr-3">
+                        <i class="fas fa-robot text-2xl text-yellow-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-yellow-800 mb-2">Dica do Sistema</h4>
+                        <p class="text-yellow-700">"Você está indo bem em Português! Para melhorar em Matemática, sugerimos praticar exercícios de geometria diariamente e revisar os conceitos básicos."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Materiais Recomendados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3 icon-center">
+                            <i class="fas fa-video text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Videoaula: Geometria Básica</h4>
+                            <p class="text-sm text-gray-600">Aprenda os conceitos fundamentais de geometria</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                        <div class="bg-green-100 p-2 rounded-full mr-3 icon-center">
+                            <i class="fas fa-file-alt text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">PDF: Regras de Concordância</h4>
+                            <p class="text-sm text-gray-600">Material resumido com todas as regras</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                        <div class="bg-purple-100 p-2 rounded-full mr-3 icon-center">
+                            <i class="fas fa-tasks text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Lista de Exercícios</h4>
+                            <p class="text-sm text-gray-600">15 questões de geometria com gabarito</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                        <div class="bg-yellow-100 p-2 rounded-full mr-3 icon-center">
+                            <i class="fas fa-question-circle text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Simulado Focado</h4>
+                            <p class="text-sm text-gray-600">20 questões sobre seus pontos fracos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

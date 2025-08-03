@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #facc15 100%);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.subject-folder {
+    transition: all 0.3s ease;
+}
+
+.subject-folder:hover {
+    transform: scale(1.03);
+}
+
+.icon-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para o modal de resultados */
+.correct-answer {
+    background-color: #d1fae5;
+    border-left: 4px solid #10b981;
+}
+
+.wrong-answer {
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+}
+
+.skipped-question {
+    background-color: #e5e7eb;
+    border-left: 4px solid #9ca3af;
+}
+
+/* Estilo para opções selecionadas */
+.option-selected {
+    background-color: #dbeafe;
+    border-color: #3b82f6;
+}
+
+/* Estilo para scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

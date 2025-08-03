@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEC - Plataforma Educacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+<div id="videos" class="tab-content">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="p-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">Videoaulas</h2>
+                    <p class="opacity-90">Aprenda com os melhores professores para o processo seletivo da ETE</p>
+                </div>
+                <div class="bg-blue-900 px-4 py-2 rounded-full flex items-center">
+                    <i class="fas fa-video mr-2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Pastas de Assuntos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Matemática -->
+                <div class="subject-folder bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-blue-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-square-root-alt text-5xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Matemática</h3>
+                        <p class="text-gray-600 text-sm mb-3">15 videoaulas disponíveis</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">5 tópicos principais</span>
+                            <button class="text-blue-600 font-medium" onclick="openSubject('matematica')">Abrir</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Português -->
+                <div class="subject-folder bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-green-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-book text-5xl text-green-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Português</h3>
+                        <p class="text-gray-600 text-sm mb-3">12 videoaulas disponíveis</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">4 tópicos principais</span>
+                            <button class="text-blue-600 font-medium" onclick="openSubject('portugues')">Abrir</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Conhecimentos Gerais -->
+                <div class="subject-folder bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-orange-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-globe text-5xl text-orange-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Conhecimentos Gerais</h3>
+                        <p class="text-gray-600 text-sm mb-3">8 videoaulas disponíveis</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">Atualidades e ciências</span>
+                            <button class="text-blue-600 font-medium" onclick="openSubject('conhecimentos')">Abrir</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dicas para Provas -->
+                <div class="subject-folder bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-yellow-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-5xl text-yellow-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Dicas para Provas</h3>
+                        <p class="text-gray-600 text-sm mb-3">8 videoaulas disponíveis</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">Gestão de tempo e técnicas</span>
+                            <button class="text-blue-600 font-medium" onclick="openSubject('dicas')">Abrir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Videoaulas Recentes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Matemática -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <img src="https://img.freepik.com/free-photo/calculator-notepad-blue-background_23-2148218549.jpg" alt="Matemática" class="absolute h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-80 rounded-full p-3 text-blue-600 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 bg-blue-600 text-white text-xs px-2 py-1">Matemática</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Equações de 1º Grau</h3>
+                        <p class="text-gray-600 text-sm mb-3">Aprenda a resolver equações básicas para as provas</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500"><i class="fas fa-clock mr-1"></i> 18min</span>
+                            <div>
+                                <a href="https://youtu.be/QXd6ubUNUuU?si=HzEY-RRE_9naU1YW" class="text-sm font-medium text-blue-600 hover:text-blue-800" target="_blank">assistir →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Português -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <img src="https://img.freepik.com/free-photo/opened-book-with-flying-letters_23-2148218319.jpg" alt="Português" class="absolute h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-80 rounded-full p-3 text-blue-600 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 bg-green-600 text-white text-xs px-2 py-1">Português</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Concordância Verbal</h3>
+                        <p class="text-gray-600 text-sm mb-3">Domine as regras de concordância para as provas</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500"><i class="fas fa-clock mr-1"></i> 22min</span>
+                            <div>
+                                <a href="https://youtu.be/QXd6ubUNUuU?si=HzEY-RRE_9naU1YW" class="text-sm font-medium text-blue-600 hover:text-blue-800" target="_blank">assistir →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Conhecimentos Gerais -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <img src="https://img.freepik.com/free-photo/newspaper-with-glasses_23-2148218535.jpg" alt="Conhecimentos Gerais" class="absolute h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-80 rounded-full p-3 text-blue-600 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 bg-orange-600 text-white text-xs px-2 py-1">Conhecimentos</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Atualidades Julho/2025</h3>
+                        <p class="text-gray-600 text-sm mb-3">Principais notícias do mês para as provas</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500"><i class="fas fa-clock mr-1"></i> 15min</span>
+                            <div>
+                                <a href="https://youtu.be/QXd6ubUNUuU?si=HzEY-RRE_9naU1YW" class="text-sm font-medium text-blue-600 hover:text-blue-800" target="_blank">assistir →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dicas -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <img src="https://img.freepik.com/free-photo/clock-with-pencil-cup_23-2148218528.jpg" alt="Dicas" class="absolute h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-80 rounded-full p-3 text-blue-600 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 bg-yellow-600 text-white text-xs px-2 py-1">Dicas</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Gestão de Tempo</h3>
+                        <p class="text-gray-600 text-sm mb-3">Como administrar melhor o tempo durante a prova</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500"><i class="fas fa-clock mr-1"></i> 15min</span>
+                            <div>
+                                <a href="https://youtu.be/QXd6ubUNUuU?si=HzEY-RRE_9naU1YW" class="text-sm font-medium text-blue-600 hover:text-blue-800" target="_blank">assistir →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button class="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-full font-medium hover:bg-blue-50">
+                    <i class="fas fa-plus mr-2"></i> Carregar Mais Videoaulas
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

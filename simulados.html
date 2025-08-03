@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEC - Plataforma Educacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+  <div id="simulados" class="tab-content active">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="p-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">Simulados & Atividades</h2>
+                    <p class="opacity-90">Prepare-se com simulados no formato ETE e atividades específicas</p>
+                </div>
+                <div class="bg-blue-900 px-2 py-2 rounded-full flex items-center">
+                    <i class="fas fa-clipboard-list mr-0"></i>
+                </div>
+            </div>
+        </div>
+        <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-6">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm">Todos</button>
+                <button class="px-4 py-2 bg-white text-blue-600 border border-blue-600 rounded-full text-sm">Simulados</button>
+                <button class="px-4 py-2 bg-white text-blue-600 border border-blue-600 rounded-full text-sm">Atividades</button>
+                <button class="px-4 py-2 bg-white text-blue-600 border border-blue-600 rounded-full text-sm">Matemática</button>
+                <button class="px-4 py-2 bg-white text-blue-600 border border-blue-600 rounded-full text-sm">Português</button>
+                <button class="px-4 py-2 bg-white text-blue-600 border border-blue-600 rounded-full text-sm">Conhecimentos Gerais</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Simulado ETE Completo -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4 icon-center">
+                            <i class="fas fa-school text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Simulado ETE - Completo</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Prova completa no formato das Escolas Técnicas Estaduais</p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Matemática</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Português</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> 60min</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 20 questões</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium" onclick="startTest('ete-completo')">Iniciar Simulado</button>
+                </div>
+                
+                <!-- Atividade de Matemática -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4 icon-center">
+                            <i class="fas fa-square-root-alt text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Atividade: Equações</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Exercícios específicos sobre equações de 1º grau</p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Matemática</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Álgebra</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> 30min</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 10 questões</span>
+                    </div>
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium" onclick="startTest('equacoes')">Iniciar Atividade</button>
+                </div>
+                
+                <!-- Simulado ETE - Português -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4 icon-center">
+                            <i class="fas fa-book text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Simulado ETE - Português</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Prova de Português no formato ETE</p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Português</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Interpretação</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Gramática</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> 30min</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 10 questões</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium" onclick="startTest('ete-portugues')">Iniciar Simulado</button>
+                </div>
+                
+                <!-- Atividade de Português -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4 icon-center">
+                            <i class="fas fa-book text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Atividade: Concordância</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Exercícios sobre concordância verbal e nominal</p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Português</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Gramática</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> 30min</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 10 questões</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-full text-sm font-medium" onclick="startTest('concordancia')">Iniciar Atividade</button>
+                </div>
+                
+                <!-- Simulado ETE - Matemática -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4 icon-center">
+                            <i class="fas fa-calculator text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Simulado ETE - Matemática</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Prova de Matemática no formato ETE</p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Matemática</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Álgebra</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Geometria</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> 30min</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 10 questões</span>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium" onclick="startTest('ete-matematica')">Iniciar Simulado</button>
+                </div>
+                
+                <!-- Simulado IFPE - Completo -->
+                <div class="feature-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4 icon-center">
+                            <i class="fas fa-bolt text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Simulado IFPE - Completo</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Teste rápido de conhecimentos em Matemática e Português</p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Matemática</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Português</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Conhecimentos Gerais</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> 90min</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 30 questões</span>
+                    </div>
+                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium" onclick="startTest('ifpe-completo')">Iniciar Quiz</button>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">Seus Resultados Recentes</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="text-left text-sm text-blue-700 border-b border-blue-200">
+                                <th class="pb-2">Atividade</th>
+                                <th class="pb-2">Tipo</th>
+                                <th class="pb-2">Data</th>
+                                <th class="pb-2">Acertos</th>
+                                <th class="pb-2">Nota</th>
+                                <th class="pb-2">Desempenho</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-sm border-b border-blue-100">
+                                <td class="py-3">ETE - Português</td>
+                                <td class="py-3">Simulado</td>
+                                <td class="py-3">DD/MM/YY</td>
+                                <td class="py-3">0/20</td>
+                                <td class="py-3">0.0</td>
+                                <td class="py-3">
+                                    <span class="bg-gray-300 text-gray-800 px-2 py-1 rounded-full text-xs">Não Realizado</span>
+                                </td>
+                            </tr>
+                            <tr class="text-sm border-b border-blue-100">
+                                <td class="py-3">Conhecimentos Gerais</td>
+                                <td class="py-3">Simulado</td>
+                                <td class="py-3">DD/MM/YY</td>
+                                <td class="py-3">0/10</td>
+                                <td class="py-3">0.0</td>
+                                <td class="py-3">
+                                    <span class="bg-gray-300 text-gray-800 px-2 py-1 rounded-full text-xs">Não Realizado</span>
+                                </td>
+                            </tr>
+                            <tr class="text-sm border-b border-blue-100">
+                                <td class="py-3">Equações de 1º Grau</td>
+                                <td class="py-3">Atividade</td>
+                                <td class="py-3">DD/MM/YY</td>
+                                <td class="py-3">0/15</td>
+                                <td class="py-3">0.0</td>
+                                <td class="py-3">
+                                    <span class="bg-gray-300 text-gray-800 px-2 py-1 rounded-full text-xs">Não Realizado</span>
+                                </td>
+                            </tr>
+                            <tr class="text-sm">
+                                <td class="py-3">ETE - Matemática</td>
+                                <td class="py-3">Simulado</td>
+                                <td class="py-3">DD/MM/YY</td>
+                                <td class="py-3">0/20</td>
+                                <td class="py-3">0.0</td>
+                                <td class="py-3">
+                                    <span class="bg-gray-300 text-gray-800 px-2 py-1 rounded-full text-xs">Não Realizado</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
