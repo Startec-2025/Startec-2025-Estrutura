@@ -6,6 +6,128 @@
     <title>STARTEC - Plataforma Educacional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body class="bg-gray-50">
+    <script src="scripts.js"></script>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <i class="fas fa-rocket logo-icon"></i>
+                    <h1 class="logo-text">STARTEC</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://chat.whatsapp.com/FIHJ7zTs9VqDD93kgpZLMg" target="_blank">Comunidade</a>
+                    </div>
+                    <div class="notification-button">
+                        <button class="notification-icon">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">0</span>
+                        </button>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-avatar">U</div>
+                        <span>Usuário</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Comunidade WhatsApp -->
+        <div class="whatsapp-card">
+            <div class="whatsapp-content">
+                <div class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="whatsapp-text">
+                    <h3>Junte-se à nossa comunidade!</h3>
+                    <p>Tire dúvidas e receba dicas no nosso grupo do WhatsApp</p>
+                    <a href="https://chat.whatsapp.com/FIHJ7zTs9VqDD93kgpZLMg" target="_blank">Entrar agora →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg class="progress-ring" viewBox="0 0 36 36">
+                        <path class="progress-ring-background" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="progress-ring-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    </svg>
+                    <div class="progress-text">0%</div>
+                </div>
+                <div class="stat-info">
+                    <h3>Progresso Geral</h3>
+                    <p>Você está no caminho certo!</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <div class="medal-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+                <div class="stat-info">
+                    <h3>Pontuação</h3>
+                    <p>0 pontos</p>
+                    <span>0 esta semana</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <div class="fire-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                </div>
+                <div class="stat-info">
+                    <h3>Sequência</h3>
+                    <p>0 dias seguidos</p>
+                    <span>Começe a Esquentar!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Navigation -->
+        <div class="features-nav">
+            <div class="tabs-container">
+                <a href="simulados.html" class="tab-button">
+                    <i class="fas fa-clipboard-list"></i> Simulados & Atividades
+                </a>
+                <a href="videoaulas.html" class="tab-button">
+                    <i class="fas fa-video"></i> Vídeo Aulas
+                </a>
+                <a href="incentivo.html" class="tab-button active">
+                    <i class="fas fa-trophy"></i> Recompensas
+                </a>
+                <a href="ia.html" class="tab-button">
+                    <i class="fas fa-robot"></i> IA de Dificuldades
+                </a>
+                <a href="trilha.html" class="tab-button">
+                    <i class="fas fa-road"></i> Trilha de Assuntos
+                </a>
+            </div>
+        </div>
+    </main>
+    <!--incentivo-->
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEC - Plataforma Educacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50">
@@ -215,6 +337,67 @@
         </div>
     </div>
 </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <h3 class="footer-title">
+                        <i class="fas fa-rocket logo-icon"></i> STARTEC
+                    </h3>
+                    <p class="footer-description">A plataforma de Educação conectada ao seu propósito.</p>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Recursos</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Simulados & Atividades</a></li>
+                        <li><a href="#" class="footer-link">Vídeo Aulas</a></li>
+                        <li><a href="#" class="footer-link">Sistema de Incentivo</a></li>
+                        <li><a href="#" class="footer-link">IA de Dificuldades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Equipe</h4>
+                    <ul class="footer-list">
+                        <li class="footer-text">Eric Souza</li>
+                        <li class="footer-text">Evellyn Renata</li>
+                        <li class="footer-text">Joaquim Fragoso</li>
+                        <li class="footer-text">Letícia Mendonça</li>
+                        <li class="footer-text">Tyler Alves</li>
+                        <li class="footer-text">Victor Brito</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-list">
+                        <li class="footer-text"><i class="fas fa-envelope icon"></i> startec.3025@gmail.com</li>
+                        <li class="footer-text"><i class="fas fa-phone icon"></i> (81) 98910-6384</li>
+                        <li class="footer-text"><i class="fas fa-map-marker-alt icon"></i> Pernambuco, Brasil</li>
+                        <li class="footer-text"><i class="fab fa-instagram icon"></i> @_startec_</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 STARTEC. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Modals -->
+    <div id="testModal" class="modal">
+        <!-- Modal content will be loaded dynamically -->
+    </div>
+
+    <div id="resultsModal" class="modal">
+        <!-- Modal content will be loaded dynamically -->
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Load default tab on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            openTab('simulados');
+        });
+    </script>
 </body>
 </html>
