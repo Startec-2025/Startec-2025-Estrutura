@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STARTEC - Plataforma Educacional</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="startec.css">
+    </head>
+    <body class="bg-gray-50">
+        <script src="scripts.js"></script>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <i class="fas fa-rocket logo-icon"></i>
+                        <h1 class="logo-text">STARTEC</h1>
+                    </div>
+                    <div class="header-actions">
+                        <div class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://chat.whatsapp.com/FIHJ7zTs9VqDD93kgpZLMg" target="_blank">Comunidade</a>
+                        </div>
+                        <div class="notification-button">
+                            <button class="notification-icon">
+                                <i class="fas fa-bell"></i>
+                            </button>
+                        </div>
+                        <div class="user-profile">
+                            <div class="user-avatar">U</div>
+                            <span>Usuário</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Comunidade WhatsApp -->
+            <div class="whatsapp-card">
+                <div class="whatsapp-content">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                <div class="whatsapp-text">
+                    <h3>Junte-se à nossa comunidade!</h3>
+                    <p>Tire dúvidas e receba dicas no nosso grupo do WhatsApp</p>
+                    <a href="https://chat.whatsapp.com/FIHJ7zTs9VqDD93kgpZLMg" target="_blank">Entrar agora →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- User Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg class="progress-ring" viewBox="0 0 36 36">
+                        <path class="progress-ring-background" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="progress-ring-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    </svg>
+                    <div class="progress-text">0%</div>
+                </div>
+                <div class="stat-info">
+                    <h3>Progresso Geral</h3>
+                    <p>Você está no caminho certo!</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <div class="medal-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+                <div class="stat-info">
+                    <h3>Pontuação</h3>
+                    <p>0 pontos</p>
+                    <span>0 esta semana</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <div class="fire-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                </div>
+                <div class="stat-info">
+                    <h3>Sequência</h3>
+                    <p>0 dias seguidos</p>
+                    <span>Começe a Esquentar!</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Navigation -->
+        <div class="features-nav">
+            <div class="tabs-container">
+                <a href="simulados.html" class="tab-button">
+                    <i class="fas fa-clipboard-list"></i> Simulados & Atividades
+                </a>
+                <a href="videoaulas.html" class="tab-button">
+                    <i class="fas fa-video"></i> Vídeo Aulas
+                </a>
+                <a href="incentivo.html" class="tab-button active">
+                    <i class="fas fa-trophy"></i> Recompensas
+                </a>
+                <a href="ia.html" class="tab-button">
+                    <i class="fas fa-robot"></i> IA de Dificuldades
+                </a>
+                <a href="trilha.html" class="tab-button">
+                    <i class="fas fa-road"></i> Trilha de Assuntos
+                </a>
+            </div>
+        </div>
+    </main>
+        
+        <!-- Loja de Pontos - Seção Única e Organizada -->
+        <div id="loja-de-pontos" class="mt-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold">Loja de Benefícios</h2>
+                            <p class="text-lg opacity-90 mt-2">Troque seus pontos por cursos e benefícios exclusivos!</p>
+                        </div>
+                        <div class="bg-blue-900 px-6 py-3 rounded-full flex items-center">
+                            <i class="fas fa-coins text-2xl mr-2"></i>
+                            <span class="font-bold">Seus pontos: 0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <!-- Seção de Cursos Básicos -->
+                    <div class="mb-12 bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">Cursos Básicos</h3>
+                        
+                        <div class="recompensas-grid grid grid-cols-3 gap-8">
+                            <!-- Curso 1 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-blue-500 text-5xl mb-6">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Curso Completo de Inglês</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprenda inglês do básico ao avançado com nosso método exclusivo</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">950 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Curso 2 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-blue-500 text-5xl mb-6">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Informática Básica</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprenda o básico sobre informática e softwares</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">1.200 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Curso 3 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-blue-500 text-5xl mb-6">
+                                    <i class="fas fa-hashtag"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Introdução ao Marketing Digital</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprenda sobre estratégias de marketing digital e engajamento</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">1.200 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Cursos Avançados -->
+                    <div class="mb-12 bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">Cursos Avançados</h3>
+                        
+                        <div class="recompensas-grid grid grid-cols-3 gap-8">
+                            <!-- Curso 1 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-blue-500 text-5xl mb-6">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Inglês para Negócios</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprofunde seu conhecimento em inglês técnico e conversação para negócios</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">1.700 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Curso 2 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-blue-500 text-5xl mb-6">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Programação Back-End</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprenda do básico ao nível intermediário de programação em Back-End</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">2.500 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Curso 3 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-blue-500 text-5xl mb-6">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Programação Front-End</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Aprenda do básico ao nível intermédiario de programação em Front-End</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">2.500 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Cursos Profissionais -->
+                    <div class="mb-12 bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">Cursos Profissionais</h3>
+                        
+                        <div class="recompensas-grid grid grid-cols-3 gap-8">
+                            <!-- Curso 1 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-purple-500 text-5xl mb-6">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Desenvolvimento Full-Stack</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Domine frameworks modernos como React e Node.js</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">3.500 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Curso 2 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-purple-500 text-5xl mb-6">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Design UX/UI</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Domine software como Figma e aprenda sobre princípios de experiência do usuário</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">3.000 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Curso 3 -->
+                            <div class="recompensa-card bg-gray-50 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div class="recompensa-icon text-purple-500 text-5xl mb-6">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Certificação em Cloud Computing</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Domine os fundamentos de AWS e Azure</p>
+                                <div class="recompensa-pontos text-yellow-500 font-bold text-xl mb-6">4.000 pontos</div>
+                                <button class="resgatar-btn bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition-colors font-medium">
+                                    RESGATAR CURSO <i class="fas fa-chevron-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <h3 class="footer-title">
+                        <i class="fas fa-rocket logo-icon"></i> STARTEC
+                    </h3>
+                    <p class="footer-description">A plataforma de Educação conectada ao seu propósito.</p>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Recursos</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Simulados & Atividades</a></li>
+                        <li><a href="#" class="footer-link">Vídeo Aulas</a></li>
+                        <li><a href="#" class="footer-link">Sistema de Incentivo</a></li>
+                        <li><a href="#" class="footer-link">IA de Dificuldades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Equipe</h4>
+                    <ul class="footer-list">
+                        <li class="footer-text">Eric Souza</li>
+                        <li class="footer-text">Evellyn Renata</li>
+                        <li class="footer-text">Joaquim Fragoso</li>
+                        <li class="footer-text">Letícia Mendonça</li>
+                        <li class="footer-text">Tyler Alves</li>
+                        <li class="footer-text">Victor Brito</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-list">
+                        <li class="footer-text"><i class="fas fa-envelope icon"></i> startec.3025@gmail.com</li>
+                        <li class="footer-text"><i class="fas fa-phone icon"></i> (81) 98910-6384</li>
+                        <li class="footer-text"><i class="fas fa-map-marker-alt icon"></i> Pernambuco, Brasil</li>
+                        <li class="footer-text"><i class="fab fa-instagram icon"></i> @_startec_</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 STARTEC. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="testModal" class="modal">
+        <!-- Modal content will be loaded dynamically -->
+    </div>
+
+    <div id="resultsModal" class="modal">
+        <!-- Modal content will be loaded dynamically -->
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

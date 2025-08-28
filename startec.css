@@ -387,26 +387,40 @@ body {
     margin-right: 0.5rem; /* mr-2 */
 }
 
-/* Copyright */
-.footer-copyright {
-    border-top: 1px solid #374151; /* border-gray-700 */
-    margin-top: 2rem; /* mt-8 */
-    padding-top: 1.5rem; /* pt-6 */
-    text-align: center;
-    color: #9ca3af; /* text-gray-400 */
+.loja-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+.gotoloja :hover{
+    color: #1e3a8a;
+    cursor: pointer;
 }
 
-/* Modals */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* bg-black bg-opacity-50 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 50; /* z-50 */
-    display: none; /* hidden */
+.recompensas-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax( 300px, 1fr));
+    gap: 2rem;
+}
+
+.recompensa-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.recompensa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recompensa-icon {
+    font-size: 3rem;
+    color: #4299e1;
+    margin-bottom: 1.5rem;
 }

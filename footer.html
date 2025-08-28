@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEC - Plataforma Educacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="footer.css"> <!-- CSS personalizado -->
+</head>
+<body class="bg-gray-50">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <h3 class="footer-title">
+                        <i class="fas fa-rocket logo-icon"></i> STARTEC
+                    </h3>
+                    <p class="footer-description">A plataforma de Educação conectada ao seu propósito.</p>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Recursos</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Simulados & Atividades</a></li>
+                        <li><a href="#" class="footer-link">Vídeo Aulas</a></li>
+                        <li><a href="#" class="footer-link">Sistema de Incentivo</a></li>
+                        <li><a href="#" class="footer-link">IA de Dificuldades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Equipe</h4>
+                    <ul class="footer-list">
+                        <li class="footer-text">Eric Souza</li>
+                        <li class="footer-text">Evellyn Renata</li>
+                        <li class="footer-text">Joaquim Fragoso</li>
+                        <li class="footer-text">Letícia Mendonça</li>
+                        <li class="footer-text">Tyler Alves</li>
+                        <li class="footer-text">Victor Brito</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-list">
+                        <li class="footer-text"><i class="fas fa-envelope icon"></i> startec.3025@gmail.com</li>
+                        <li class="footer-text"><i class="fas fa-phone icon"></i> (81) 98910-6384</li>
+                        <li class="footer-text"><i class="fas fa-map-marker-alt icon"></i> Pernambuco, Brasil</li>
+                        <li class="footer-text"><i class="fab fa-instagram icon"></i> @_startec_</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 STARTEC. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="testModal" class="modal">
+        <!-- Modal content will be loaded dynamically -->
+    </div>
+
+    <div id="resultsModal" class="modal">
+        <!-- Modal content will be loaded dynamically -->
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Load default tab on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            openTab('simulados');
+        });
+    </script>
+</body>
+</html>

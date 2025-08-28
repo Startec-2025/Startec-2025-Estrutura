@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEC - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #0ea5e9;
+            --dark-blue: #1e3a8a;
+            --light-blue: #dbeafe;
+            --accent-yellow: #f59e0b;
+            --light-yellow: #fef3c7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blue-section {
+            flex: 1;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            z-index: 2;
+        }
+        
+        .logo-icon {
+            font-size: 2.8rem;
+            color: white;
+            margin-right: 12px;
+        }
+        
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgb(255, 255, 255);
+        }
+        
+        .blue-content {
+            z-index: 2;
+        }
+        
+        .blue-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .blue-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .features-list li i {
+            margin-right: 15px;
+            color: var(--light-yellow);
+            font-size: 1.2rem;
+        }
+        
+        .white-section {
+            flex: 1;
+            background: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+        
+        .form-subtitle {
+            color: #6b7280;
+            font-size: 1rem;
+        }
+        
+        .form-switcher {
+            display: flex;
+            background: var(--light-blue);
+            border-radius: 12px;
+            padding: 5px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .form-switcher .slider {
+            position: absolute;
+            height: calc(100% - 10px);
+            width: calc(50% - 5px);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+        
+        .slider.login {
+            left: 5px;
+        }
+        
+        .slider.register {
+            left: calc(50% + 0px);
+        }
+        
+        .form-switcher button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: transparent;
+            font-weight: 600;
+            color: #6b7280;
+            cursor: pointer;
+            border-radius: 8px;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .form-switcher button.active {
+            color: var(--dark-blue);
+        }
+        
+        .input-group {
+            margin-bottom: 22px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #374151;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .input-label a {
+            color: var(--primary-blue);
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 16px 18px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+            outline: none;
+        }
+        
+        .btn-primary {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, rgb(19, 141, 255) 100%); ;
+        }
+        
+        .btn-primary i {
+            margin-left: 8px;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #6b7280;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #e5e7eb;
+        }
+        
+        .divider-text {
+            padding: 0 15px;
+            font-size: 14px;
+        }
+        
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-btn i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .facebook { color: #1877F2; }
+        .google { color: #4e4e4e; }
+        
+        .form-container {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .form-container.active {
+            display: block;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6b7280;
+        }
+        
+        .password-input {
+            position: relative;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .accent-yellow {
+            color: var(--accent-yellow);
+        }
+        
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                max-width: 500px;
+            }
+            
+            .blue-section, .white-section {
+                padding: 40px 30px;
+            }
+            
+            .blue-section {
+                order: 2;
+            }
+            
+            .white-section {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blue-section, .white-section {
+                padding: 30px 20px;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .blue-title {
+                font-size: 1.8rem;
+            }
+            
+            .social-login {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="blue-section">
+            <div class="logo-container">
+                <i class="fas fa-rocket logo-icon"></i>
+                <h1 class="logo-text">STARTEC</h1>
+            </div>
+            
+            <div class="blue-content">
+                <h2 class="blue-title">A plataforma de Educação conectada ao seu propósito.</h2>
+                <p class="blue-description">Entre ou crie sua conta para acessar conteúdos exclusivos, videoaulas e muito mais.</p>
+                
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Acesso a videoaulas exclusivas</li>
+                    <li><i class="fas fa-check-circle"></i> Materiais de estudo em alta qualidade</li>
+                    <li><i class="fas fa-check-circle"></i> Comunidade de alunos ativa</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte especializado</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="white-section">
+            <div class="form-header">
+                <h2 class="form-title">Bem-vindo de volta!</h2>
+                <p class="form-subtitle">Entre na sua conta para continuar</p>
+            </div>
+            
+            <div class="form-switcher">
+                <div class="slider login"></div>
+                <button class="active" id="login-btn">Entrar</button>
+                <button id="register-btn">Criar Conta</button>
+            </div>
+            
+            <div class="form-container active" id="login-form">
+                <div class="input-group">
+                    <label class="input-label">E-mail</label>
+                    <input type="email" class="input-field" placeholder="seu@email.com">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">
+                        <span>Senha</span>
+                        <a href="#">Esqueceu a senha?</a>
+                    </label>
+                    <div class="password-input">
+                        <input type="password" class="input-field" placeholder="Sua senha">
+                        <span class="password-toggle" id="password-toggle">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <button class="btn-primary">Entrar na Conta <i class="fas fa-arrow-right"></i></button>
+                
+                <div class="divider">
+                    <span class="divider-text">Ou entre com</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </button>
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                </div>
+            </div>
+            
+            <div class="form-container" id="register-form">
+                <div class="input-group">
+                    <label class="input-label">Nome Completo</label>
+                    <input type="text" class="input-field" placeholder="Seu nome completo">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">E-mail</label>
+                    <input type="email" class="input-field" placeholder="seu@email.com">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Senha</label>
+                    <div class="password-input">
+                        <input type="password" class="input-field" placeholder="Crie uma senha segura">
+                        <span class="password-toggle" id="register-password-toggle">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Confirmar Senha</label>
+                    <div class="password-input">
+                        <input type="password" class="input-field" placeholder="Digite novamente sua senha">
+                        <span class="password-toggle" id="register-confirm-toggle">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <button class="btn-primary">Criar Conta <i class="fas fa-user-plus"></i></button>
+                
+                <div class="divider">
+                    <span class="divider-text">Ou cadastre-se com</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </button>
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Alternar entre login e registro com efeito deslizante
+        const loginBtn = document.getElementById('login-btn');
+        const registerBtn = document.getElementById('register-btn');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const slider = document.querySelector('.slider');
+        
+        loginBtn.addEventListener('click', function() {
+            this.classList.add('active');
+            registerBtn.classList.remove('active');
+            loginForm.classList.add('active');
+            registerForm.classList.remove('active');
+            slider.classList.remove('register');
+            slider.classList.add('login');
+            
+            // Atualizar título do formulário
+            document.querySelector('.form-title').textContent = 'Bem-vindo de volta!';
+            document.querySelector('.form-subtitle').textContent = 'Entre na sua conta para continuar';
+        });
+        
+        registerBtn.addEventListener('click', function() {
+            this.classList.add('active');
+            loginBtn.classList.remove('active');
+            registerForm.classList.add('active');
+            loginForm.classList.remove('active');
+            slider.classList.remove('login');
+            slider.classList.add('register');
+            
+            // Atualizar título do formulário
+            document.querySelector('.form-title').textContent = 'Crie sua conta!';
+            document.querySelector('.form-subtitle').textContent = 'Junte-se à nossa comunidade de aprendizado';
+        });
+        
+        // Mostrar/ocultar senha
+        function setupPasswordToggle(toggleId, inputSelector) {
+            const toggle = document.getElementById(toggleId);
+            const input = document.querySelector(inputSelector);
+            
+            if (toggle && input) {
+                toggle.addEventListener('click', function() {
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        this.innerHTML = '<i class="far fa-eye-slash"></i>';
+                    } else {
+                        input.type = 'password';
+                        this.innerHTML = '<i class="far fa-eye"></i>';
+                    }
+                });
+            }
+        }
+        
+        setupPasswordToggle('password-toggle', '#login-form input[type="password"]');
+        setupPasswordToggle('register-password-toggle', '#register-form input[type="password"]:nth-of-type(1)');
+        setupPasswordToggle('register-confirm-toggle', '#register-form input[type="password"]:nth-of-type(2)');
+    </script>
+</body>
+</html>
