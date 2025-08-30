@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="startec.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Resgate de Recompensa</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -114,3 +125,90 @@
                 </a>
             </div>
         </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-reward">
+            <a class="goto-loja" href="loja.html">
+                <i class="fas fa-arrow-left"></i>
+                <span>Voltar para loja</span>
+            </a>
+            
+            <div class="reward-content">
+                <div class="img-reward">
+                    <i class="fas fa-gift"></i>
+                </div>
+                
+                <h2 class="reward-title">Curso Completo de Inglês</h2>
+                
+                <p class="reward-description">
+                    Aprenda inglês do básico ao avançado com nosso método exclusivo.
+                </p>
+                
+                <div class="reward-options">
+                    <h3 class="option-title">Selecionar uma opção</h3>
+                    
+                    <div class="option-card selected">
+                        <div class="option-name">Curso Completo de Inglês</div>
+                        <div class="option-points">1.035 pontos</div>
+                        <div class="option-discount">Nível 2: 945 pontos</div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <button class="button-reward">
+                    <i class="fas fa-gift"></i>
+                    RESGATAR RECOMPENSA
+                </button>
+                
+                <p class="terms">
+                    Quando você confirma sua ordem para um produto da Startec, você concorda que seu valor total debitado da sua conta, sem a possibilidade de ser reembolsado.
+                
+                <div class="benefits">
+                    <h3 class="benefits-title">Propostas do Curso</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Aprender inglês do nível básico ao avançado</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Implementar dinâmicas e fichas de exercícios</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Emissão de currículo gratuita! </span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="restrictions">
+                    <h3 class="restrictions-title">Restrições:</h3>
+                    <p class="restrictions-content">
+                        O curso não deve ser compartilhado com outros usuários, tão quanto o currículo. A violação dos critérios pode causar exclusão da conta na plataforma.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Seleção de opções
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.option-card').forEach(c => {
+                    c.classList.remove('selected');
+                });
+                card.classList.add('selected');
+            });
+        });
+        
+        // Simulação de resgate
+        document.querySelector('.button-reward').addEventListener('click', () => {
+            const selectedOption = document.querySelector('.option-card.selected .option-name').textContent;
+            alert(`Recompensa "${selectedOption}" resgatada com sucesso!`);
+        });
+    </script>
+</body>
+</html>

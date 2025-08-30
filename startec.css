@@ -424,3 +424,296 @@ body {
     color: #4299e1;
     margin-bottom: 1.5rem;
 }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: #ffd700;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .whatsapp-button a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .notification-icon {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .user-avatar {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: #ffd700;
+            color: #1e40af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .container-reward {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .goto-loja {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .goto-loja:hover {
+            color: #2563eb;
+        }
+        
+        .reward-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .img-reward {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            background: linear-gradient(to right, #e5e5e7, #f0f0f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 3rem;
+        }
+        
+        .reward-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        
+        .reward-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .reward-options {
+            margin: 1.5rem 0;
+        }
+        
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .option-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .option-card:hover {
+            border-color: #2563eb;
+            background: #f8fafc;
+        }
+        
+        .option-card.selected {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+        
+        .option-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        
+        .option-points {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        
+        .option-discount {
+            color: #16a34a;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 1.5rem 0;
+        }
+        
+        .button-reward {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .button-reward:hover {
+            background-color: #1e40af;
+        }
+        
+        .terms {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin: 1.5rem 0;
+            line-height: 1.5;
+        }
+        
+        .benefits {
+            margin: 1.5rem 0;
+        }
+        
+        .benefits-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: #64748b;
+        }
+        
+        .benefits-list li i {
+            color: #2563eb;
+            margin-top: 0.25rem;
+        }
+        
+        .restrictions {
+            margin: 1.5rem 0;
+        }
+        
+        .restrictions-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .restrictions-content {
+            font-size: 0.875rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .reward-content {
+                flex-direction: column;
+            }
+            
+            .img-reward {
+                height: 150px;
+            }
+        }
