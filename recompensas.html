@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="startec.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Resgate de Recompensa</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +17,14 @@
     <title>STARTEC - Plataforma Educacional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/startec.css">
+    <link rel="stylesheet" href="startec.css">
 </head>
 <!-- Header -->
     <header class="header">
         <div class="header-container">
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="img/logo-startec.png" width="128" height="128">
+                    <img src="logo-startec.png" width="128" height="128">
                     <h1 class="logo-text">STARTEC</h1>
                 </div>
                 <div class="header-actions">
@@ -134,12 +145,12 @@
                 </p>
                 
                 <div class="reward-options">
-                    <h3 class="title" style="font-size: 20px;">Selecionar uma opção</h3>
+                    <h3 class="sub-title">Selecionar uma opção</h3>
                     
-                    <div class="option-card selected">
-                        <div class="option-name" style="font-size: 1rem;">Curso Completo de Inglês</div>
-                        <div id="option-points">1.035 pontos</div>
-                    </div>
+                <div class="option-card">
+                    <div class="sub-title">Curso Completo de Inglês</div>
+                    <div class="sub-title">1.035 pontos</div>
+                </div>
                 </div>
                 
                 <div class="divider"></div>
@@ -153,7 +164,7 @@
                     Quando você confirma sua ordem para um produto da Startec, você concorda que seu valor total debitado da sua conta, sem a possibilidade de ser reembolsado.
                 
                 <div class="benefits">
-                    <h3 class="benefits-title">Propostas do Curso</h3>
+                    <h3 class="title">Propostas do Curso</h3>
                     <ul class="benefits-list">
                         <li>
                             <i class="fas fa-check-circle"></i>
@@ -171,8 +182,8 @@
                 </div>
                 
                 <div class="restrictions">
-                    <h3 class="restrictions-title">Restrições:</h3>
-                    <p class="restrictions-content">
+                    <h3 class="title">Restrições:</h3>
+                    <p class="description">
                         O curso não deve ser compartilhado com outros usuários, tão quanto o currículo. A violação dos critérios pode causar exclusão da conta na plataforma.
                     </p>
                 </div>
@@ -180,6 +191,22 @@
         </div>
     </main>
 
-    <script src="js/recompensas.js"></script>
+    <script>
+        // Seleção de opções
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.option-card').forEach(c => {
+                    c.classList.remove('selected');
+                });
+                card.classList.add('selected');
+            });
+        });
+        
+        // Simulação de resgate
+        document.querySelector('.button-reward').addEventListener('click', () => {
+            const selectedOption = document.querySelector('.option-card.selected .option-name').textContent;
+            alert(`Recompensa "${selectedOption}" resgatada com sucesso!`);
+        });
+    </script>
 </body>
 </html>
