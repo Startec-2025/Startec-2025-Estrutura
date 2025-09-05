@@ -15,18 +15,28 @@ body {
 }
 
 .title{
-    color: #2563eb;
+    display: flex;
+    color: #1e293b;
     font-weight: bold;
     text-align: left;
     margin: 1rem;
-    font-size: 25px;
+    font-size: 1.5rem;
+}
+
+.sub-title{
+    display: flex;
+    color: #1e293b;
+    font-weight: 600;
+    text-align: left;
+    margin: 1rem;
+    font-size: 1.1rem;
 }
 
 .description{
-    color: #9ca3af;
+    color: #64748b;
     text-align: left;
     margin: 1rem;
-    font-size: 15px;
+    font-size: inherit;
 }
 
 /*
@@ -320,18 +330,27 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    border: 1px solid #2563eb;
-    background-color: white;
-    color: #2563eb;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 }
 
 .tab-button.active {
     background-color: #2563eb;
     color: white;
+    transition: background-color 0.3s ;
 }
 
-.tab-button:hover:not(.active) {
+.tab-button:not(.active) {
+    background-color: white;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.tab-button.active:hover{
+    background-color: #3b82f6;
+    color: white;
+}
+
+.tab-button:hover{
     background-color: #2563eb;
     color: white;
 }
@@ -397,27 +416,87 @@ body {
     background:rgb(219, 218, 218);
 }
 
-.reward-options{
-    display: flex;
+.option-card{
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
     padding-top: 0.5rem;
     border-radius: 10px;
     margin: 2rem;
     width: auto;
-    height: 30vh;
+    height: 20vh;
+    background-color: #f4f5f7;
+    border:1px solid #a7a9aa;
+}
+
+.option-card:hover{
+    transform: scale(1.025);
     background-color: #f0f7fd;
     border:1px solid #4299e1;
 }
 
-#option-points{
-    display: flex;
-    align-items: left;
-    
-    padding-top: 1rem;
-    font-size: 20px;
-    font-weight: bold;
-    color: #facc15;
+.divider{
+    height: 1px;
+    background: #e2e8f0;
+    margin: 1.5rem 0;
 }
 
+.button-reward{
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.button-reward:hover {
+    background-color: #3b82f6;
+    transform: scale(1.025);
+    box-shadow: #333;
+}
+
+.terms {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+
+.benefits {
+    margin: 1.5rem 0;
+}
+        
+.benefits-list {
+    list-style: none;
+}
+        
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #64748b;
+}
+        
+.benefits-list li i {
+    color: #2563eb;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+}
+        
+.restrictions {
+    margin: 1.5rem 0;
+}
+        
 /*
  * Footer
  * Estilos para o rodapé da página.
@@ -510,3 +589,4 @@ body {
         padding: 1rem;
     }
 }
+
