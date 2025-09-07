@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STARTEC - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/login.css">
-
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="container">
         <div class="blue-section">
             <div class="logo-container">
-                <img src="img/logo-startec.png" width="128" height="128">
+                <img src="logo-startec.png" width="128" height="128">
                 <h1 class="logo-text">STARTEC</h1>
             </div>
             
@@ -30,6 +29,7 @@
         </div>
         
         <div class="white-section">
+            
             <div class="form-header">
                 <h2 class="form-title">Bem-vindo de volta!</h2>
                 <p class="form-subtitle">Entre na sua conta para continuar</p>
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 
-                <button class="btn-primary">Criar Conta <i class="fas fa-user-plus"></i></button>
+                <a href="Radar.html"><button class="btn-primary">Criar Conta <i class="fas fa-user-plus"></i></button></a>
                 
                 <div class="divider">
                     <span class="divider-text">Ou cadastre-se com</span>
@@ -125,6 +125,61 @@
         </div>
     </div>
 
-    <script src="js/login.js"></script>
+    <script>
+        // Alternar entre login e registro com efeito deslizante
+        const loginBtn = document.getElementById('login-btn');
+        const registerBtn = document.getElementById('register-btn');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const slider = document.querySelector('.slider');
+        
+        loginBtn.addEventListener('click', function() {
+            this.classList.add('active');
+            registerBtn.classList.remove('active');
+            loginForm.classList.add('active');
+            registerForm.classList.remove('active');
+            slider.classList.remove('register');
+            slider.classList.add('login');
+            
+            // Atualizar título do formulário
+            document.querySelector('.form-title').textContent = 'Bem-vindo de volta!';
+            document.querySelector('.form-subtitle').textContent = 'Entre na sua conta para continuar';
+        });
+        
+        registerBtn.addEventListener('click', function() {
+            this.classList.add('active');
+            loginBtn.classList.remove('active');
+            registerForm.classList.add('active');
+            loginForm.classList.remove('active');
+            slider.classList.remove('login');
+            slider.classList.add('register');
+            
+            // Atualizar título do formulário
+            document.querySelector('.form-title').textContent = 'Crie sua conta!';
+            document.querySelector('.form-subtitle').textContent = 'Junte-se à nossa comunidade de aprendizado';
+        });
+        
+        // Mostrar/ocultar senha
+        function setupPasswordToggle(toggleId, inputSelector) {
+            const toggle = document.getElementById(toggleId);
+            const input = document.querySelector(inputSelector);
+            
+            if (toggle && input) {
+                toggle.addEventListener('click', function() {
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        this.innerHTML = '<i class="far fa-eye-slash"></i>';
+                    } else {
+                        input.type = 'password';
+                        this.innerHTML = '<i class="far fa-eye"></i>';
+                    }
+                });
+            }
+        }
+        
+        setupPasswordToggle('password-toggle', '#login-form input[type="password"]');
+        setupPasswordToggle('register-password-toggle', '#register-form input[type="password"]:nth-of-type(1)');
+        setupPasswordToggle('register-confirm-toggle', '#register-form input[type="password"]:nth-of-type(2)');
+    </script>
 </body>
 </html>
