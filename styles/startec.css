@@ -39,6 +39,19 @@ body {
     font-size: inherit;
 }
 
+.link{
+    display: flex;
+    color: #1e3a8a;
+    text-align: left;
+    margin: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.link :hover{
+    color: #2040a8;
+}
+
 /*
  * Layout Containers
  * Define a estrutura de layout principal para o conteúdo.
@@ -461,7 +474,6 @@ body {
 .button-reward:hover {
     background-color: #3b82f6;
     transform: scale(1.025);
-    box-shadow: #333;
 }
 
 .terms {
